@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTT Platform Clone</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+</head>
+<body>
+    <header>
+        <h1>OTT Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="toggleModal('login-modal')">Login</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search" placeholder="Search..." oninput="searchContent(event)">
+    </header>
+    <main>
+        <div id="home" class="page">
+            <section id="trending">
+                <h2>Trending Now</h2>
+                <div class="content-grid" id="trending-content">
+                    <div class="content-card" data-title="Trending Movie 1" data-description="Exciting description of Trending Movie 1." data-image="https://via.placeholder.com/300x200">
+                        <img src="Fight club __ Movie poster.jpg" alt="Trending Movie 1">
+                        <h3>Fight Club</h3>
+                        <p class="content-description">An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.</p>
+                    </div>
+                    <div class="content-card" data-title="Trending Movie 2" data-description="Exciting description of Trending Movie 2." data-image="https://via.placeholder.com/300x200">
+                        <img src="Generic Django Unchained Movies Film Art Painting Home Gifts Lovers Poster No Frame (24x36).jpg" alt="Trending Movie 2">
+                        <h3>Django Unchained</h3>
+                        <p class="content-description">With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.</p>
+                    </div>
+                    <div class="content-card" data-title="Trending Movie 2" data-description="Exciting description of Trending Movie 2." data-image="https://via.placeholder.com/300x200">
+                        <img src="'Pulp Fiction' Original US Film Poster.jpg" alt="Trending Movie 2">
+                        <h3>Pulp Fiction</h3>
+                        <p class="content-description">The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.</p>
+                    </div>
+                    <div class="content-card" data-title="Trending Movie 2" data-description="Exciting description of Trending Movie 2." data-image="https://via.placeholder.com/300x200">
+                        <img src="Animal Ranbir Kapoor.jpg" alt="Trending Movie 2">
+                        <h3>Animal</h3>
+                        <p class="content-description">The hardened son of a powerful industrialist returns home after years abroad and vows to take bloody revenge on those threatening his father's life.</p>
+                    </div>
+                    <div class="content-card" data-title="Trending Movie 2" data-description="Exciting description of Trending Movie 2." data-image="https://via.placeholder.com/300x200">
+                        <img src="Inglourious Basterds.jpg" alt="Trending Movie 2">
+                        <h3>Inglourious Basterds</h3>
+                        <p class="content-description">In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="recommended">
+                <h2>Recommended for You</h2>
+                <div class="content-grid" id="recommended-content">
+                    <div class="content-card" data-title="Recommended Movie 1" data-description="Exciting description of Recommended Movie 1." data-image="https://via.placeholder.com/300x200">
+                        <img src="Goodfellas.jpg" alt="Recommended Movie 1">
+                        <h3>Goodfellas</h3>
+                        <p class="content-description">The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.</p>
+                    </div>
+                    <div class="content-card" data-title="Recommended Movie 1" data-description="Exciting description of Recommended Movie 1." data-image="https://via.placeholder.com/300x200">
+                        <img src="Seven.jpg" alt="Recommended Movie 1">
+                        <h3>Seven</h3>
+                        <p class="content-description">Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.</p>
+                    </div>
+                    <div class="content-card" data-title="Recommended Movie 1" data-description="Exciting description of Recommended Movie 1." data-image="https://via.placeholder.com/300x200">
+                        <img src="Old Boy Movie Alternative Poster Mid Century Grunge Poster Print Art Swiss Graphic.jpg" alt="Recommended Movie 1">
+                        <h3>Old Boy</h3>
+                        <p class="content-description">After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must track down his captor in five days.</p>
+                    </div>
+                    <div class="content-card" data-title="Recommended Movie 1" data-description="Exciting description of Recommended Movie 1." data-image="https://via.placeholder.com/300x200">
+                        <img src="Sensation (2021).jpg" alt="Recommended Movie 1">
+                        <h3>Sensation</h3>
+                        <p class="content-description">When a lowly postman is inducted into a top-secret superhuman DNA program at a research facility, it's revealed that he'll be able to receive, control and send information based on the senses of others.</p>
+                    </div>
+                    <div class="content-card" data-title="Recommended Movie 1" data-description="Exciting description of Recommended Movie 1." data-image="https://via.placeholder.com/300x200">
+                        <img src="Scarface.jpg" alt="Recommended Movie 1">
+                        <h3>Scarface</h3>
+                        <p class="content-description">In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.</p>
+                    </div>
+                   
+                </div>
+            </section>
+        </div>
+        <div id="details" class="page hidden">
+            <h2 id="content-title">Content Title</h2>
+            <img id="content-image" class="details-image" src="https://via.placeholder.com/300x200" alt="Content Image">
+            <p id="content-description">Content description goes here.</p>
+            <button onclick="showPage('home')">Back to Home</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 OTT Platform</p>
+    </footer>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form onsubmit="return authenticateUser(event)">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
